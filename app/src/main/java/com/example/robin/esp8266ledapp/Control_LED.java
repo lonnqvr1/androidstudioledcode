@@ -114,7 +114,7 @@ public class Control_LED extends Activity implements View.OnClickListener {
         String serverResponse = "ERROR";
 
         try {
-            URI website = new URI("http://"+ipAddress+":"+portNumber+"/?"+parameterName+"="+parameterValue);
+            URI website = new URI("http://"+ipAddress+":"+portNumber+"/?"+parameterName+"="+parameterValue+"\r");
             URL urlObj = new URL(website.toString()); // create an HTTP GET object
             HttpURLConnection urlConnection = (HttpURLConnection) urlObj.openConnection(); // create an HTTP client
             // define the URL e.g. http://myIpaddress:myport/?pin=13 (to toggle pin 13 for example)
